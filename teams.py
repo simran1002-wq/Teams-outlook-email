@@ -95,18 +95,18 @@ if __name__ == "__main__":
         for email in emails:
             print(f"Subject: {email['subject']}, From: {email['from']['emailAddress']['address']}\n")
 
-        print("\nSending a test email...\n")
-        send_outlook_email(
-            access_token,
-            subject="Test Email",
-            body="This is a test email sent from a Python script.",
-            recipients=[USER_EMAIL]
-        )
+        # print("\nSending a test email...\n")
+        # send_outlook_email(
+        #     access_token,
+        #     subject="Test Email",
+        #     body="This is a test email sent from a Python script.",
+        #     recipients=[USER_EMAIL]
+        # )
 
-        print("\nFetching messages from Microsoft Teams...\n")
-        teams_messages = get_teams_messages(access_token)
-        for message in teams_messages:
-            print(f"Chat Id: {message['id']}, Created DateTime: {message['createdDateTime']}\n")
+        # print("\nFetching messages from Microsoft Teams...\n")
+        # teams_messages = get_teams_messages(access_token)
+        # for message in teams_messages:
+        #     print(f"Chat Id: {message['id']}, Created DateTime: {message['createdDateTime']}\n")
 
     except Exception as e:
         print(f"An error occurred: {e}")
